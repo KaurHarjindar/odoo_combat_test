@@ -1,0 +1,13 @@
+.font {
+    font-family:'sans-serif';
+}
+
+@font-face {
+    font-family: AvenirLTPro-Book;
+    src: url('/sale_pdf_quote_builder/static/src/fonts/AvenirLTProBook.otf') format('opentype');  
+    }
+
+@font-face {
+    font-family: AvenirLTPro-Roman;
+    src: url('/sale_pdf_quote_builder/static/src/fonts/AvenirLTProRoman.otf') format('opentype');  
+    }

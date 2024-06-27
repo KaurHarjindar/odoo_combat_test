@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_order_form_inherit_pdf" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.pdf.builder</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Room Concept" name="room_concept">
+                    <group>
+                        <field name="room_concept_pdf"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+    
+</odoo>

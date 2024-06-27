@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="sale_order_template_form" model="ir.ui.view">
+        <field name="name">sale.order.template.form</field>
+        <field name="model">sale.order.template</field>
+        <field name="inherit_id" ref="sale_management.sale_order_template_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='sale_info']" position="inside">
+                <field name="product_image"/>
+            </xpath>
+
+            <notebook position="inside">
+                <page name="pdf_quote" string="PDF Quote Builder">
+                    <group>
+                        <p class="text-muted" colspan="2">
+                            Provide header pages and footer pages to compose an attractive quotation.
+                            If empty, it will use those define in the company settings.<br/>
+                        </p>
+                        <group>
+                            <field name="sale_header_name" invisible="1"/>
+                            <field name="sale_header" filename="sale_header_name" options="{'accepted_file_extensions': '.pdf'}"/>
+                            <field name="sale_footer_name" invisible="1"/>
+                            <field name="sale_footer" filename="sale_footer_name" options="{'accepted_file_extensions': '.pdf'}"/>
+                        </group>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>
